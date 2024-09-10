@@ -76,7 +76,7 @@ const ProductDetails = () => {
                     quantity: quantity,
                   },
                 });
-                setQuantity(0);
+                setQuantity(1);
               }}
               className=" fs-5 px-3 add-to-cart-btn mt-3 border-0 float-end float-md-start rounded"
             >
