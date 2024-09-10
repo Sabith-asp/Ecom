@@ -8,7 +8,7 @@ import Cart from "./pages/Cart/Cart";
 import DataContext from "./context/DataContext";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import CartProvider from "./context/CartProvider";
-import Checkout from "./pages/checkout/checkout";
+import Checkout from "./pages/checkout/Checkout";
 import ProductCategory from "./pages/productTipes/ProductCategory";
 import Premium from "./pages/premium/Premium";
 
