@@ -1,23 +1,45 @@
-# eCommerce Frontend
+# Ecom
 
-![eCommerce Frontend](./path/to/your/image.png) <!-- Replace with a screenshot of your project -->
+![eCommerce Frontend](https://github.com/Sabith-asp/Ecom/blob/master/public/Screenshot%202024-09-10%20145912.png?raw=true)
+
 
 ## 🌟 Overview
 
-Welcome to the **eCommerce Frontend**! This is a **fully responsive** eCommerce application built using **React**, **Context API**, and **Bootstrap**. It integrates with the **FakeStoreAPI** for product data and **Razorpay** for payment processing. Enjoy features like product filtering, adding/removing items from the cart, and a sleek checkout page.
+Welcome to **Ecom**—a **fully responsive** eCommerce application! Built with **React**, **Context API**, and **Bootstrap**, this project offers a smooth shopping experience with features such as product filtering, cart management, and a sleek checkout process. It integrates with **FakeStoreAPI** and **Razorpay** for a comprehensive eCommerce solution.
+
+## 📚 Table of Contents
+
+- [Features](#✨-features)
+- [Screenshots](#📸-screenshots)
+- [Tech Stack](#🚀-tech-stack)
+- [Installation](#🔧-installation)
+- [Usage](#🛠️-usage)
+- [Razorpay Integration](#💳-razorpay-integration)
 
 ## ✨ Features
 
-- **🛒 Product Filtering**: Easily filter products by category.
-- **🛍️ Add to Cart/Remove from Cart**: Manage your cart effortlessly.
-- **💳 Checkout Page**: Secure checkout with Razorpay.
-- **📱 Responsive Design**: Optimized for all devices.
+- **🛒 Product Filtering**: Filter products by category to quickly find what you’re looking for.
+- **🛍️ Add to Cart/Remove from Cart**: Easily manage your shopping cart with intuitive controls.
+- **💳 Checkout Page**: Securely complete your purchases with Razorpay.
+- **📱 Responsive Design**: Fully optimized for a seamless experience on all devices.
 
-![Product Filter](./path/to/your/product-filter-image.png) <!-- Replace with a screenshot of the product filter -->
+## 📸 Screenshots
 
-![Cart Functionality](./path/to/your/cart-functionality-image.png) <!-- Replace with a screenshot of add to cart/remove from cart -->
+### Product Filter
 
-![Checkout Page](./path/to/your/checkout-page-image.png) <!-- Replace with a screenshot of the checkout page -->
+![Product Filter](https://github.com/Sabith-asp/Ecom/blob/master/public/Screenshot%202024-09-10%20145932.png?raw=true)
+
+### Cart Functionality
+
+![Cart Functionality](https://github.com/Sabith-asp/Ecom/blob/master/public/Screenshot%202024-09-10%20151828.png?raw=true)
+
+### Checkout Page
+
+![Checkout Page](https://github.com/Sabith-asp/Ecom/blob/master/public/Screenshot%202024-09-10%20151839.png?raw=true)
+
+### Payment
+
+![Payment](https://github.com/Sabith-asp/Ecom/blob/master/public/Screenshot%202024-09-10%20151848.png?raw=true)
 
 ## 🚀 Tech Stack
 
@@ -27,9 +49,9 @@ Welcome to the **eCommerce Frontend**! This is a **fully responsive** eCommerce 
 
 ## 🔧 Installation
 
-Get started with the project by following these steps:
+To get started with the project:
 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/ecommerce-frontend.git
+   git clone https://github.com/Sabith-asp/Ecom.git
