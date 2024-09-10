@@ -9,6 +9,8 @@ export const LoadingContext = createContext();
 const DataContext = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
+  const [premiumProducts, setPremiumProducts] = useState([]);
+  const [premiumLoading, setPremiumLoading] = useState(true);
   //   const [loading, setLoading] = useState(true);
   //   const [error, setError] = useState();
   useEffect(() => {
@@ -24,11 +26,28 @@ const DataContext = ({ children }) => {
     };
     loadProducts();
   }, []);
+
+  useEffect(() => {
+    const premiumProductFetch = async () => {
+      try {
+        const response = await fetch("/premium.json");
+        const premiumData = await response.json();
+        setPremiumProducts(premiumData);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setPremiumLoading(false);
+      }
+    };
+    premiumProductFetch();
+  }, []);
   //   console.log(products);
 
   return (
     <productContext.Provider value={products}>
-      <LoadingContext.Provider value={loading}>
+      <LoadingContext.Provider
+        value={{ loading, premiumProducts, premiumLoading }}
+      >
         {children}
       </LoadingContext.Provider>
     </productContext.Provider>

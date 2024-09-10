@@ -23,6 +23,7 @@ const Routers = () => {
               <Route index element={<Home />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/product-details/:id" element={<ProductDetails />} />
+              <Route path="/product-details/:id" element={<ProductDetails />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/products/:category" element={<ProductCategory />} />
               <Route path="/premium/:category" element={<Premium />} />

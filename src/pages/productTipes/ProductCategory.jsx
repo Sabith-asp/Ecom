@@ -12,7 +12,7 @@ import { cartContext } from "../../context/CartProvider";
 const ProductCategory = () => {
   const { searchVal, setSearchval } = useContext(cartContext);
   const data = useContext(productContext);
-  const loading = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
   const { category } = useParams();
   const [categoryData, setCategoryData] = useState(data);
 

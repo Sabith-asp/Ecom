@@ -6,19 +6,38 @@ import Quantity from "../../components/Quantity/Quantity";
 import { productContext } from "../../context/DataContext";
 import { FaStar } from "react-icons/fa";
 import { cartContext } from "../../context/CartProvider";
+import { LoadingContext } from "../../context/DataContext";
 
 const ProductDetails = () => {
+  const { loading, premiumProducts, premiumLoading } =
+    useContext(LoadingContext);
   const [quantity, setQuantity] = useState(1);
   const { dispatch } = useContext(cartContext);
   const { id } = useParams();
-  const products = useContext(productContext);
+  const normalProducts = useContext(productContext);
   //   console.log(products);
 
   //   useEffect(() => {
   //     const product = products.find((product) => product.id === parseInt(id));
   //   }, [third]);
 
-  const product = products.find((product) => product.id === parseInt(id));
+  //   if (id <= 50) {
+  //     const product = normalProducts.find(
+  //       (product) => product.id === parseInt(id)
+  //     );
+  //   } else {
+  //     const product = premiumProducts.find(
+  //       (product) => product.id === parseInt(id)
+  //     );
+  //   }
+
+  const product =
+    id <= 50
+      ? normalProducts.find((product) => product.id === parseInt(id))
+      : premiumProducts.find((product) => product.id === parseInt(id));
+
+  console.log(product);
+
   //   console.log(product);
   //   console.log(quantity);
 
@@ -27,11 +46,7 @@ const ProductDetails = () => {
       <div className="row d-flex flex-column flex-md-row align-items-center">
         <div className="left1 p-0 p-md-3  overflow-hidden col-11 col-md-4">
           <div className="left1-sub">
-            <img
-              src={product.image}
-              alt="hrllo"
-              className="w-100 border-1 border-black"
-            />
+            <img src={product.image} className="w-100 border-1 border-black" />
           </div>
 
           {/* product sub images */}

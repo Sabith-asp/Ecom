@@ -7,7 +7,7 @@ import { LoadingContext } from "../../context/DataContext";
 import Loader from "../../components/Loader/Loader";
 import { cartContext } from "../../context/CartProvider";
 const Products = () => {
-  const loading = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
   const data = useContext(productContext);
   const [filteredProducts, setFilteredProducts] = useState(data);
 

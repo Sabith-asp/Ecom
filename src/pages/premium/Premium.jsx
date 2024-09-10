@@ -11,45 +11,33 @@ import { cartContext } from "../../context/CartProvider";
 // import premium from "../../../public/premium.json";
 
 const Premium = () => {
-  const [categoryData, setCategoryData] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [premiumLoading, setPremiumLoading] = useState(true);
-  useEffect(() => {
-    const premiumProductFetch = async () => {
-      try {
-        const response = await fetch("/premium.json");
-        const data = await response.json();
-        setCategoryData(data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setPremiumLoading(false);
-      }
-    };
-    premiumProductFetch();
-  }, []);
+  //   const [categoryData, setCategoryData] = useState([]);
 
-  console.log(categoryData);
+  const { loading, premiumProducts, premiumLoading } =
+    useContext(LoadingContext);
+  const [filteredProducts, setFilteredProducts] = useState(premiumProducts);
+
+  console.log(filteredProducts);
 
   const { searchVal, setSearchval } = useContext(cartContext);
 
   const { category } = useParams();
 
-  const categorisedProducts = categoryData.filter(
+  const categorisedProducts = premiumProducts.filter(
     (item) => item.category === category
   );
-  const searchFilter = categoryData.filter((product) =>
+  const searchFilter = premiumProducts.filter((product) =>
     product.title.toLowerCase().includes(searchVal.toLowerCase())
   );
   useEffect(() => {
     if (searchVal === "") {
       category === "All"
-        ? setFilteredProducts(categoryData)
+        ? setFilteredProducts(premiumProducts)
         : setFilteredProducts(categorisedProducts);
     } else {
       setFilteredProducts(searchFilter);
     }
-  }, [category, filteredProducts]);
+  }, [category]);
 
   //   console.log(searchVal);
   //   console.log(category);
