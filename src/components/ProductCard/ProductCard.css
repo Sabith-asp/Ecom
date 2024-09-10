@@ -1,0 +1,48 @@
+.card3 {
+  border-radius: 20px;
+}
+.card3 img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  /* border: 2px solid red; */
+  box-shadow: 0 0 5px red;
+  border-radius: 17px;
+}
+
+.offer {
+  background-color: rgb(33, 32, 87);
+  color: white;
+  font-size: 8px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border-top-left-radius: 15px;
+  top: 12px;
+  left: 12px;
+}
+.plus-btn {
+  background-color: rgb(253, 35, 35);
+}
+.plus-btn:hover {
+  transform: scale(1.12);
+  transition: 0.2s ease-in-out;
+}
+
+.plus-btn:active {
+  background-color: rgb(180, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .card3 img {
+    height: 115px;
+  }
+  .details h5 {
+    font-size: 15px;
+  }
+  .details h6 {
+    font-size: 15px;
+  }
+  .details span {
+    font-size: 13px;
+  }
+}

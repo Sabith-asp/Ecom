@@ -1,0 +1,8 @@
+.decrement,
+.increment {
+  background-color: rgb(253, 35, 35);
+}
+
+.qty-btn:active {
+  background-color: brown;
+}

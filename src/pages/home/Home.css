@@ -1,0 +1,50 @@
+.home {
+  padding-top: 120px;
+}
+
+.banner {
+  border-radius: 30px;
+  min-height: 400px;
+  background-color: rgb(197, 197, 197);
+}
+.banner-para {
+  font-size: 18px;
+}
+
+.right img {
+  bottom: -15px;
+}
+.banner-btn {
+  background-color: rgb(240, 39, 39);
+}
+.banner-sub {
+  bottom: 13px;
+}
+.banner-sub img {
+  width: 80px;
+  background-color: red;
+  margin-right: 10px;
+  border-radius: 25px;
+  transition: 0.2s ease-in-out;
+}
+.banner-sub img:hover {
+  transform: scale(1.112);
+}
+
+@media (max-width: 768px) {
+  .right img {
+    bottom: -85px;
+    left: -115px;
+  }
+  .banner {
+    overflow: hidden;
+    min-height: 200px;
+    border-radius: 20px;
+  }
+  .home {
+    padding-top: 90px;
+  }
+  .banner-para {
+    font-size: 13px;
+  }
+}

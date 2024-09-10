@@ -1,0 +1,16 @@
+.slick-next {
+  right: 0;
+}
+.slick-prev {
+  left: 0;
+  display: none;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-slide {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
